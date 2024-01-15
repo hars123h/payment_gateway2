@@ -36,7 +36,6 @@ const UTR = () => {
             await axios.post(`${BASE_URL}/place_recharge`, {
                 refno,
                 recharge_value: location.amount,
-                status: 'pending',
                 user_id: location.uid,
                 mobno: userDetails.mobno,
                 time: new Date(),
