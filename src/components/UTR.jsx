@@ -57,7 +57,7 @@ const UTR = () => {
                     setTimeout(() => {
 
                         // navigate('/deposit_records')
-                        window.location.href = `${redirectUrl}/records`
+                        window.location.href = `${redirectUrl}/balancerecord`
 
                     }, 3000);
                 }
@@ -92,7 +92,7 @@ const UTR = () => {
         getUserDetails()
     }, [])
 
-    console.log(userDetails);
+    // console.log(userDetails);
 
 
     return (
