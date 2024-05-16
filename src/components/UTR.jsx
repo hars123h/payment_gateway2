@@ -31,6 +31,11 @@ const UTR = () => {
             return;
         }
 
+        if (location.amount < 410) {
+            toaster('amount should be greater than 410');
+            return;
+        }
+
         // setLoading(true)
         try {
             await axios.post(`${BASE_URL}/place_recharge`, {
