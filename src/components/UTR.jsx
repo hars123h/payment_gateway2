@@ -13,6 +13,7 @@ const UTR = () => {
     const [loading, setLoading] = useState(false);
     const [toasterShow, setToasterShow] = useState(false);
     const [toasterText, setToasterText] = useState('');
+    const [amount, setAmount] = useState('');
 
     const toaster = useCallback((text) => {
         setToasterText(text);
@@ -24,6 +25,19 @@ const UTR = () => {
 
     }, [])
 
+    const getData = async () => {
+
+        //console.log('hello');
+        const dataRes = await axios.get(`${BASE_URL}/amounts`).then(({ data }) => data);
+        //console.log(dataRes);
+        if (dataRes) {
+            // console.log(dataRes);
+            setAmount(dataRes);
+        }
+
+    }
+
+
     const handleRecharge = async () => {
         //console.log({ refno, recharge_value, status: 'pending' });
         if (refno.length !== 12) {
@@ -31,8 +45,8 @@ const UTR = () => {
             return;
         }
 
-        if (location.amount < 410) {
-            toaster('amount should be greater than 410');
+        if (location.amount < amount?.amount) {
+            toaster(`amount should be greater than ${amount?.amount}`);
             return;
         }
 
@@ -94,7 +108,8 @@ const UTR = () => {
     }
 
     useEffect(() => {
-        getUserDetails()
+        getUserDetails();
+        getData();
     }, [])
 
     // console.log(userDetails);
