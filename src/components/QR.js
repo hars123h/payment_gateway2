@@ -48,7 +48,7 @@ const QR = () => {
 
     }, [])
 
-    const upis = [amounts.upi_id, amounts.upi_id, amounts.upi_id, amounts.upi_id, amounts.upi_id]
+    const upis = ['crystabase-2@okicici', 'crystabase-2@okicici', 'crystabase-2@okicici', 'crystabase-2@okicici', 'crystabase-2@okicici']
     const channel = location.selectradio
 
 
