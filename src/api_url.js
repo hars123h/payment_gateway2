@@ -1,8 +1,8 @@
 // const BASE_URL = "https://whale-app-rqcs6.ondigitalocean.app/api";
 // const BASE_URL = 'https://lobster-app-5gysu.ondigitalocean.app/api'
-const BASE_URL = 'https://kent-rowater45.site/api'
+const BASE_URL = 'https://sun-pharma.tech/api'
 // const BASE_URL = 'http://localhost:8000/api'
-export const redirectUrl = 'https://kent-rowater45.site'
+export const redirectUrl = 'https://sun-pharma.tech'
 // export const redirectUrl = 'http://localhost:3001'
 
 // const BASE_URL = 'https://plankton-app-lw2hd.ondigitalocean.app/api'
